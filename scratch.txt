@@ -1,0 +1,17 @@
+adam = keras.optimizers.Adam()
+
+keras.callbacks.EarlyStopping(monitor='val_loss')
+
+keras.callbacks.ModelCheckpoint(filepath='melhor_modelo', monitor='val_loss', save_best_only=True)
+
+model.fit(batch_size=480, epochs=5, validation_split=0.2, callbacks=callbacks)
+
+model.summary()
+
+model.get_config()
+
+model.layers[1].get_weights()[0] # pesos
+
+model.layers[1].get_weights()[1] # vieses
+
+model.layers[].set_weights([])
